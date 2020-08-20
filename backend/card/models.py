@@ -14,4 +14,4 @@ class card(models.Model):
     relic_type = models.charField(maxLength = 25)
     numbered = models.BooleanField()
     numbered_to = models.PositiveSmallIntegerField()
-    
+    card_img = models.ImageField(upload_to='images/')
