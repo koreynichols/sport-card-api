@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class card(models.Model):
+class Card(models.Model):
     player_name = models.CharField(max_length = 50)
     card_company = models.CharField(max_length = 20)
     card_set = models.CharField(max_length = 20)
@@ -11,7 +11,7 @@ class card(models.Model):
     rookie_card = models.BooleanField()
     auto = models.BooleanField()
     relic = models.BooleanField()
-    relic_type = models.CharField(max_length = 25)
+    relic_type = models.CharField(max_length = 25, blank=True, null=True)
     numbered = models.BooleanField()
-    numbered_to = models.PositiveSmallIntegerField()
+    numbered_to = models.PositiveSmallIntegerField(blank=True, null=True)
     card_img = models.ImageField(upload_to='images/')
