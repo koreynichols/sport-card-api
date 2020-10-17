@@ -21,7 +21,7 @@ from rest_framework import routers
 from card import views
 
 router = routers.DefaultRouter()
-router.register(r'todos', views.CardViewSet)
+router.register(r'card', views.CardViewSet, basename='card')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
